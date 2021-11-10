@@ -106,9 +106,9 @@ class Planes extends Component {
                 </div>
                 <div className="card-body">
                   <h1 className="card-title pricing-card-title">
-                    $11.900 <small className="text-muted">/ mes</small>
+                    $9.990 <small className="text-muted">/ mes</small>
                   </h1>
-                  <small className="text-muted">Valor Anual $142.000</small>
+                  <small className="text-muted">Valor Anual $119.880</small>
                   <a
                     class="waves-effect waves-light btn modal-trigger"
                     href="#modal1"
@@ -118,31 +118,38 @@ class Planes extends Component {
                   <div id="modal1" className="modal">
                     <div className="modal-content">
                       <h4>Promociones Plan Básico</h4>
-                      <p>Con nuestras promociones puedes seleccionar el plan que mas te acomode</p>
+                      <h6>(*) Valor referencial $9.990</h6>
+                      <p>Con nuestras promociones puedes seleccionar el plan que más te acomode</p>
                       <table class="highlight">
                         <thead>
                           <tr>
                             <th data-field="id">Meses</th>
+                            <th data-field="name">(%) Dcto.</th>
                             <th data-field="name">Valor Mes</th>
-                            <th data-field="price">Valor Total</th>
+                            
+                            <th data-field="price">Promoción</th>
                           </tr>
                         </thead>
 
                         <tbody>
                           <tr>
                             <td>Plan 1 mes</td>
-                            <td>$11.900 c/Mes</td>
-                            <td>$11.900</td>
+                            <td>20%</td>
+                            <td>$7.992 c/Mes</td>
+                            <td>$7.992</td>
+                            
                           </tr>
                           <tr>
                             <td>Plan 6 meses</td>
-                            <td>$8.500 c/Mes</td>
-                            <td>$51.500</td>
+                            <td>30%</td>
+                            <td>$6.993 c/Mes</td>                            
+                            <td>$41.958</td>
                           </tr>
                           <tr>
                             <td>Plan 12 meses</td>
-                            <td>$8.000 c/Mes</td>
-                            <td>$96.000</td>
+                            <td>50%</td>
+                            <td>$4.995 c/Mes</td>                            
+                            <td>$59.940</td>
                           </tr>
                         </tbody>
                       </table>
@@ -242,9 +249,9 @@ class Planes extends Component {
                 </div>
                 <div className="card-body">
                   <h1 className="card-title pricing-card-title">
-                    $14.280 <small className="text-muted">/ Mes</small>
+                    $11.990 <small className="text-muted">/ Mes</small>
                   </h1>
-                  <small className="text-muted">Valor Anual $171.300</small>
+                  <small className="text-muted">Valor Anual $143.880</small>
                   <a
                     class="waves-effect waves-light btn modal-trigger"
                     href="#modal2"
@@ -254,31 +261,36 @@ class Planes extends Component {
                   <div id="modal2" className="modal">
                     <div className="modal-content">
                       <h4>Promociones Plan Plus</h4>
-                      <p>Con nuestras promociones puedes seleccionar el plan que mas te acomode</p>
+                      <h6>(*) Valor referencial $11.990</h6>
+                      <p>Con nuestras promociones puedes seleccionar el plan que más te acomode</p>
                       <table class="highlight">
                         <thead>
                           <tr>
                             <th data-field="id">Meses</th>
-                            <th data-field="name">Valor Mes</th>
-                            <th data-field="price">Valor Total</th>
+                            <th data-field="name">(%) Dcto.</th>
+                            <th data-field="name">Valor Mes</th>                            
+                            <th data-field="price">Promoción</th>
                           </tr>
                         </thead>
 
                         <tbody>
                           <tr>
                             <td>Plan 1 mes</td>
-                            <td>$14.280 c/Mes</td>
-                            <td>$14.280</td>
+                            <td>20%</td>
+                            <td>$9.592 c/Mes</td>                            
+                            <td>$9.592</td>
                           </tr>
                           <tr>
                             <td>Plan 6 meses</td>
-                            <td>$10.200 c/Mes</td>
-                            <td>$51.000</td>
+                            <td>30%</td>
+                            <td>$8.393 c/Mes</td>                            
+                            <td>$50.358</td>
                           </tr>
                           <tr>
                             <td>Plan 12 meses</td>
-                            <td>$9.600 c/Mes</td>
-                            <td>$96.000</td>
+                            <td>50%</td>
+                            <td>$5.995 c/Mes</td>                            
+                            <td>$71.940</td>
                           </tr>
                         </tbody>
                       </table>

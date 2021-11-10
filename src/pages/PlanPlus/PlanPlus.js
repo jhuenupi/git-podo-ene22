@@ -1,121 +1,305 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import PropTypes from "prop-types";
-
-export default class PlanBasico extends Component {
-  constructor(props) {
-    super(props);
-
-    this.planseleccionado = React.createRef();
-    this.meses=React.createRef();
-    this.cadames=React.createRef();
-    this.subtotal=React.createRef();
-    this.total=React.createRef();
-    this.impto=React.createRef();
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-    //alert("Your favorite flavor is: " + event.target.value);
-
-    if (event.target.value==="1")
-    
-    {
-      this.meses.current.value=event.target.value;
-      this.cadames.current.value="$12.000";
-      this.subtotal.current.value="$12.000";
-      this.impto.current.value="$2.280";
-      this.total.current.value="$14.280";
+import { useAuth0 } from "@auth0/auth0-react";
+import Rut from "../../Components/helpers/Rut";
+const PlanPlus = () => {
+  const [plan, setPlan] = useState(null);
+  const [mes, setMes] = useState(null);
+  const [DctoPtg, setDctoPtg] = useState(null);
+  const [Neto, setNeto] = useState(null);
+  const [Dcto$, setDcto$] = useState(null);
+  const [ValorST, setValorST] = useState(null);
+  const [IVA, setIva] = useState(null);
+  const [ValorT, setValorT] = useState(null);
+  const [rut, setRut] = useState("");
+  const [rutValido, setRutValido] = useState(false);
+  const { user } = useAuth0();
+  const getPlan = (value) => {
+    if (value === "1") {
+      setMes("1");
+      setDctoPtg("20%");
+      setNeto("$10.076");
+      setDcto$("$2.015");
+      setValorST("$8,061");
+      setIva("$1.531");
+      setValorT("$9.592");
     }
-    if (event.target.value==="6")
-    
-    {
-        this.meses.current.value=event.target.value;
-        this.cadames.current.value="$10.200";
-        this.subtotal.current.value="$61.200";
-        this.impto.current.value="$11.628";
-        this.total.current.value="$72.828";
+    if (value === "6") {
+      setMes("6");
+      setDctoPtg("30%");
+      setNeto("$60.454");
+      setDcto$("$18.136");
+      setValorST("$42.318");
+      setIva("$8.040");
+      setValorT("$50.358");
     }
-    if (
-        event.target.value==="12")
-    {
-        this.meses.current.value=event.target.value;
-        this.cadames.current.value="$9.600";
-        this.subtotal.current.value="$115.200";
-        this.impto.current.value="$21.888";
-        this.total.current.value="$137.088";    
+    if (value === "12") {
+      setMes("12");
+      setDctoPtg("50%");
+      setNeto("$120.908");
+      setDcto$("$60.454");
+      setValorST("$60.454");
+      setIva("$11.486");
+      setValorT("$71.940");
     }
-  }
+  };
 
-  handleSubmit(event) {
-    alert("Your favorite flavor is: " + this.state.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
+  return (
+    <>
       <div className="container">
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <h2>PLAN PLUS PODOUBICA</h2>
+
+          <h5>INGRESE DATOS BÁSICOS</h5>
+
+          <h5>Selecciona tu plan:</h5>
           <label>
-            Selecciona tu plan:
-            <select
-              class="browser-default"
-              onChange={this.handleChange}
-            >
-              <option disabled selected value="0">Seleciona una opción</option>  
-              <option value="1">PLAN 1 Meses x $12.000</option>  
-              <option value="6">PLAN 6 Meses x $61.200</option>
-              <option value="12">PLAN 12 Meses x $115.200</option>
-            </select>
+            <div class="input-field">
+              <select
+                class="browser-default"
+                onChange={(e) => {
+                  getPlan(e.target.value);
+                }}
+              >
+                <option value="" disabled selected>
+                  Selecciona tu plan
+                </option>
+
+                <option value="1">PLAN 1 Meses</option>
+                <option value="6">PLAN 6 Meses</option>
+                <option value="12">PLAN 12 Meses</option>
+              </select>
+            </div>
           </label>
+
           <div>
-            <table classname="highlight">
+            <table className="">
               <thead>
                 <tr>
                   <th data-field="id">Meses</th>
-                  <th data-field="name">Valor Mes</th>
-                  <th data-field="price">Valor Total</th>
+                  <th data-field="name">% Dcto.</th>
+                  <th data-field="name">Valor Neto</th>
+                  <th data-field="name">$ Dcto.</th>
+                  <th data-field="price">Total</th>
                 </tr>
               </thead>
-
               <tbody>
                 <tr>
-                  <td><input disabled ref={this.meses} ></input></td>
-                  <td><input disabled ref={this.cadames} ></input></td>
-                  <td><input disabled ref={this.subtotal} ></input></td>
+                  <td>
+                    <p>{mes}</p>
+                  </td>
+                  <td>
+                    <p>{DctoPtg}</p>
+                  </td>
+                  <td>
+                    <p>{Neto}</p>
+                  </td>
+                  <td>
+                    <p>{Dcto$}</p>
+                  </td>
+                  <td>
+                    <p>{ValorST}</p>
+                  </td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>IVA</td>
-                  <td><input disabled ref={this.impto} ></input></td>
+                  <td>
+                    <p>{IVA}</p>
+                  </td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>TOTAL</td>
-                  <td><input disabled ref={this.total} ></input></td>
+                  <td>
+                    <p>{ValorT}</p>
+                  </td>
                 </tr>
               </tbody>
             </table>
-            <div className="container col 22 ">
-                <p></p>
-                <div className="col s20"/>
-                <div className="col s2">
-                    <a className="waves-effect waves-light btn">PAGAR</a>
+            <div className="row flex-lg-nowrap">
+              <div className="col">
+                <div className="row">
+                  <div className="col mb-3">
+                    <div className="card">
+                      <div className="card-body">
+                        <div className="e-profile">
+                          <div className="row">
+                            <div className="col-12 col-sm-auto mb-3">
+                              <div className="mx-auto" style={{ width: 140 }}>
+                                <div
+                                  className="d-flex justify-content-center align-items-center rounded"
+                                  style={{
+                                    height: 140,
+                                    backgroundColor: "rgb(233, 236, 239)",
+                                  }}
+                                >
+                                  <span
+                                    style={{
+                                      color: "rgb(166, 168, 170)",
+                                      font: "bold 8pt Arial",
+                                    }}
+                                  >
+                                    140x140
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                              <div className="text-center text-sm-left mb-2 mb-sm-0">
+                                <h4 className="pt-sm-2 pb-1 mb-0 text-nowrap">
+                                  {user.name}
+                                </h4>
+                                <p className="mb-0">{user.email}</p>
+                                <div className="text-muted">
+                                  {/* <small>Last seen 2 hours ago</small> */}
+                                </div>
+                                <div className="mt-2">
+                                  <button
+                                    className="btn btn-primary"
+                                    type="button"
+                                  >
+                                    <i className="fa fa-fw fa-camera" />
+                                    <span></span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div className="text-center text-sm-right">
+                                <span className="badge badge-secondary">
+                                  administrator
+                                </span>
+                                <div className="text-muted">
+                                  <small>{}</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <ul className="nav nav-tabs">
+                            <li className="nav-item">
+                              <a href className="active nav-link">
+                                Datos Básicos
+                              </a>
+                            </li>
+                          </ul>
+                          <div className="tab-content pt-3">
+                            <div className="tab-pane active">
+                              <form className="form" noValidate>
+                                <div className="row">
+                                  <div className="col">
+                                    <div className="row">
+                                      <div className="col">
+                                        <div className="form-group">
+                                          <p>Nombre Completo</p>
+                                          <input
+                                            className="form-control"
+                                            type="text"
+                                            name="name"
+                                            placeholder=""
+                                            defaultValue=""
+                                          />
+                                        </div>
+                                      </div>
+                                      <div className="col">
+                                        <div className="form-group">
+                                          <p>Rut</p>
+                                          <Rut
+                                            value={rut}
+                                            onChange={(e) =>
+                                              setRut(e.target.value)
+                                            }
+                                            onValid={setRutValido}
+                                          >
+                                            <input
+                                              type="text"
+                                              name="rut"
+                                              placeholder="Rut"
+                                              required
+                                            ></input>
+                                          </Rut>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="row">
+                                      <div className="col">
+                                        <div className="form-group">
+                                          <p>Email</p>
+                                          <input
+                                            className="form-control"
+                                            type="text"
+                                            placeholder="user@example.com"
+                                            value={user.email}
+                                          />
+                                        </div>
+                                      </div>
+                                      <div className="col">
+                                        <div className="form-group">
+                                          <p>Telefono movil</p>
+                                          <input
+                                            className="form-control"
+                                            type="text"
+                                            placeholder="+569 1234 5678"
+                                            value=""
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="row">
+                                      <div className="col mb-3">
+                                        <div className="form-group">
+                                          <p>Acerca de mi</p>
+                                          <textarea
+                                            className="form-control"
+                                            rows={5}
+                                            placeholder="My Bio"
+                                            defaultValue={""}
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="row">
+                                  <div className="col-12 col-sm-5 offset-sm-1 mb-3"></div>
+                                </div>
+                                <div className="row"></div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="row ">
+              <label>
+                <input type="checkbox" />
+                <span>Acepto terminos y condiciones</span>
+              </label>
+            </div>
+            <div class="row "> 
+            <span class=" lighten-2">*Una vez aceptado el pago de tu plan podrás editar y completar tu perfil.</span>            
+            
+            </div>            
+            <div class="row ">
+              <p></p>
+              <div class="col s12" />
+              <div class="col s9"></div>
+              <div class="col s3">
+                <a className="waves-effect waves-light btn " onClick="">PAGAR</a>
+              </div>
             </div>
             <div className="container col 12 ">
-            <p></p>
+              <p></p>
             </div>
-            <div>
-
-
-            </div>
-
+            <div></div>
           </div>
         </form>
       </div>
-    );
-  }
-}
+    </>
+  );
+};
+
+export default PlanPlus;

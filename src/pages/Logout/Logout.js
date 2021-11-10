@@ -7,10 +7,10 @@ const Logout = () => {
                         <button
             className="btn btn-primary btn-block"
             onClick={() => logout()}
-            >Log Out
+            >Cerrar Sesión
             </button>   
         </div>
     )
 }
 
-export default Logout
+export default Logout;

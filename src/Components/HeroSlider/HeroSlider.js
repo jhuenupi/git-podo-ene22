@@ -2,13 +2,13 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // images
-import image1 from '../../images/Slide/banner1.png';
-import image2 from '../../images/Slide/banner2.png';
-import image3 from '../../images/Slide/banner3.png';
-import image4 from '../../images/Slide/banner4.png';
-import image5 from '../../images/Slide/banner5.png';
-import image6 from '../../images/Slide/banner6.png';
-import image7 from '../../images/Slide/banner7.png';
+import image1 from '../../images/Slide/banner1.jpg';
+import image2 from '../../images/Slide/banner2.jpg';
+import image3 from '../../images/Slide/banner3.jpg';
+import image4 from '../../images/Slide/banner4.jpg';
+import image5 from '../../images/Slide/banner5.jpg';
+import image6 from '../../images/Slide/banner6.jpg';
+import image7 from '../../images/Slide/banner7.jpg';
 // Import Swiper styles
 import '../../../node_modules/swiper/swiper.min.css'
 import "../../../node_modules/swiper/components/pagination/pagination.min.css"
