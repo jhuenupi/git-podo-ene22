@@ -2,7 +2,7 @@
   "name": "modern_react_navbar",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jhuenupi.github.io/git-podo/",
+  "homepage": "https://jhuenupi.github.io/git-podo-aug/",
   "dependencies": {
     "@auth0/auth0-react": "^1.6.0",
     "@date-io/date-fns": "^2.11.0",
