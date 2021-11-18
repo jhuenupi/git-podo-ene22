@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import imgBlog1 from "../../images/HomePage/Blog/BLOG2_DETALLE.jpg"
+import imgBlogEPC from "../../images/HomePage/Blog/EPC_LOGO.png"
+import imgBlogLogo from "../../images/HomePage/Blog/logo_letras2.png"
+
 
 export default class Blogdos extends Component {
     render() {
@@ -13,7 +17,7 @@ export default class Blogdos extends Component {
                         <blockquote>
                             Como parte de nuestro plan estratégico PODOUBICA y EPC (Escuela de Profesiones Clínicas) firmamos un acuerdo de colaboración mutua. Apostando por ejes claves para la formación profesional en el campo de la podología, la investigación, el desarrollo y la contribución social.
                         </blockquote>
-                            <img class="materialboxed" width="650" src="images/blog/BLOG2_DETALLE.jpg"/>
+                            <img class="materialboxed" width="650" src={imgBlog1}/>
                         <blockquote>
                             EPC (Escuela Profesiones Clínicas) es un líder permanente en la búsqueda y entrega de los nuevos conocimientos y tecnologías en el área de la podología que con una mirada humanista y cristiana entrega garantías permanente de excelencias, por su parte PODOUBICA es una plataforma online que ha sido creada para Profesionales de la Podología, cuyo objetivo es ser una vitrina publicitaria en redes sociales. Mostrando cada una de las ofertas de manera georreferenciada, a fin de dar la mayor información acerca de la ubicación y su entorno, así como también de quienes prestan este tipo de servicios. 
                         </blockquote>
@@ -24,10 +28,10 @@ export default class Blogdos extends Component {
 
                         <div class="row" style={{paddingTop: "5%"}}>
                             <div class="col s1">
-                                <img src="./images/blog/EPC_LOGO.png"/>
+                                <img src= {imgBlogEPC}/>
                             </div>
                             <div class="col s2">
-                                <img src="./images/blog/logo_letras2.png" width="80%"/>
+                                <img src={imgBlogLogo} width="80%"/>
                             </div>
                         </div>            
                     </div>

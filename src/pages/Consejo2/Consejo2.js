@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import imgConsejo from "../../images/HomePage/Consejos/consejo2_apoyo2.jpg"
 
 export default class Consejo2 extends Component {
     render() {
@@ -12,7 +13,7 @@ export default class Consejo2 extends Component {
             <div class="hide-on-small-only">
 
               <div className="row center">
-                <img class="materialboxed" width="80%" src="images/Consejos/consejo2_apoyo2.jpg"/>
+                <img class="materialboxed" width="80%" src={imgConsejo}/>
               </div>
 
             </div>

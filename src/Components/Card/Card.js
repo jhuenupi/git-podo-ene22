@@ -1,4 +1,11 @@
 import React, { Component } from 'react'
+import imgBlogPortada1 from "../../images/HomePage/Blog/BLOG1_PORTADA.jpg"
+import imgBlogPortada2 from "../../images/HomePage/Blog/BLOG2_PORTADA.jpg"
+import imgBlogPortada3 from "../../images/HomePage/Blog/BLOG3_PORTADA.jpg"
+import imgBlogPortada4 from "../../images/HomePage/Blog/BLOG4_PORTADA.jpg"
+import imgConsejosPortada1 from "../../images/HomePage/Consejos/consejo1_portada.jpg"
+import imgConsejosPortada2 from "../../images/HomePage/Consejos/consejo2_portada.jpg"
+import imgConsejosPortada3 from "../../images/HomePage/Consejos/consejo3_portada.jpg"
 
 export default class Card extends Component {
     render() {
@@ -75,7 +82,7 @@ export default class Card extends Component {
                 <div className="col s7 m3">
                         <div className="card">
                             <div className="card-image">
-                            <img src="images/blog/BLOG1_PORTADA_1.jpg" />
+                            <img src={imgBlogPortada1} />
                             <span className="card-title"></span>
                             </div>
                             <div className="card-content">
@@ -90,7 +97,7 @@ DEBEMOS PREGUNTARNOS ¿ES RECOMENDABLE PARA LOS PIES...</p>
                     <div className="col s7 m3">
                         <div className="card">
                             <div className="card-image">
-                            <img src="images/blog/BLOG2_PORTADA.jpg" />
+                            <img src={imgBlogPortada2} />
                             <span className="card-title"></span>
                             </div>
                             <div className="card-content">
@@ -104,7 +111,7 @@ DEBEMOS PREGUNTARNOS ¿ES RECOMENDABLE PARA LOS PIES...</p>
                     <div className="col s12 m7">
                         <div className="card">
                             <div className="card-image">
-                            <img src="images/blog/BLOG3_PORTADA.jpg" />
+                            <img src={imgBlogPortada3} />
                             <span className="card-title"></span>
                             </div>
                             <div className="card-content">
@@ -118,7 +125,7 @@ DEBEMOS PREGUNTARNOS ¿ES RECOMENDABLE PARA LOS PIES...</p>
                     <div className="col s12 m7">
                         <div className="card">
                             <div className="card-image">
-                            <img src="images/blog/BLOG4_PORTADA.jpg" />
+                            <img src={imgBlogPortada4} />
                             <span className="card-title"></span>
                             </div>
                             <div className="card-content">
@@ -137,7 +144,7 @@ DEBEMOS PREGUNTARNOS ¿ES RECOMENDABLE PARA LOS PIES...</p>
                     <div className="col s7 m3">
                         <div className="card">
                             <div className="card-image">
-                            <img src="images/Consejos/consejo1_portada.jpg" />
+                            <img src={imgConsejosPortada1} />
                             <span className="card-title"></span>
                             </div>
                             <div className="card-content">
@@ -151,7 +158,7 @@ DEBEMOS PREGUNTARNOS ¿ES RECOMENDABLE PARA LOS PIES...</p>
                     <div className="col s12 m7">
                         <div className="card">
                             <div className="card-image">
-                            <img src="images/Consejos/consejo2_portada.jpg" />
+                            <img src={imgConsejosPortada2} />
                             <span className="card-title"></span>
                             </div>
                             <div className="card-content">
@@ -165,7 +172,7 @@ DEBEMOS PREGUNTARNOS ¿ES RECOMENDABLE PARA LOS PIES...</p>
                     <div className="col s12 m7">
                         <div className="card">
                             <div className="card-image">
-                            <img src="images/Consejos/consejo3_portada.jpg" />
+                            <img src={imgConsejosPortada3} />
                             <span className="card-title"></span>
                             </div>
                             <div className="card-content">

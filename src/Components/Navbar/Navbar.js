@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "../../pages/Login/Login";
 import Logout from "../../pages/Logout/Logout";
 import Creatucuenta from "../../pages/Creatucuenta/Creatucuenta";
+import LogoPie from "../../images/Logo/logo_pie2_oscuro2.png"
+import LogoLetras from "../../images/Logo/logo_letras2.png"
 
 const Navbar = () => {
   const { isAuthenticated, isLoading, loginWithRedirect, user } = useAuth0();
@@ -28,12 +30,13 @@ const Navbar = () => {
                 <a href="/">
                   <img
                     href="#"
-                    src="./images/blog/logo_pie2_oscuro2.png"
+                    src={LogoPie}
+                    // "/blog/logo_pie2_oscuro2.png"
                     height={50}
                   ></img>
                   <img
                     href="#"
-                    src="./images/blog/logo_letras2.png"
+                    src={LogoLetras}
                     height={35}
                   ></img>
                   <a

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import imgBlog4 from "../../images/HomePage/Blog/BLOG4_APOYO.jpg"
 export default class Blogcuatro extends Component {
     render() {
         return (
@@ -19,7 +19,7 @@ export default class Blogcuatro extends Component {
             <blockquote>
                 No debes preocuparte, no es grave, sin embargo, es importante saber la causa para poder ser tratada oportunamente, y así no derive en problemas mayores.
             </blockquote>
-      <img className="materialboxed center-align"  width="60%" src="images/blog/BLOG4_APOYO.jpg"/>
+      <img className="materialboxed center-align"  width="60%" src={imgBlog4} />
       <h6>¿Cuáles son las causas de la descamación en los pies?</h6>
       
       <blockquote>

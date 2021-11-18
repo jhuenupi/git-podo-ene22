@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import imgBlog1 from "../../images/HomePage/Blog/BLOG1_DETALLE.jpg"
+
 
 export default class Bloguno extends Component {
     render() {
@@ -21,7 +23,7 @@ export default class Bloguno extends Component {
             Heredar el calzado de hermanos mayores o familiares es un hábito muy frecuente entre los padres y madres para los más pequeños, sin embargo, debemos respondernos si esta costumbre es aconsejable para la salud de sus pies.
       Lamentablemente la respuesta es NO. No hay dos pies iguales, ni los de una misma persona lo son. Un zapato heredado, en la mayoría de las ocasiones, está deformado y desgastado en la suela y otras partes, ya que previamente ha sido utilizado por otro niño, por tanto, esto puede tener consecuencias negativas en el desarrollo del pie y la forma de caminar del niño que lo recibe.
       </blockquote>
-      <img class="materialboxed" width="650" src="images/blog/BLOG1_DETALLE.jpg"/>
+      <img class="materialboxed" width="650" src={imgBlog1}/>
       <h6>¿QUÉ DEBEMOS SABER?:</h6>
       
       <blockquote>

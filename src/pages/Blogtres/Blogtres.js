@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import imgBlog3 from "../../images/HomePage/Blog/BLOG3_APOYO.jpg"
 export default class Blogtres extends Component {
     render() {
         return (
@@ -14,7 +14,7 @@ export default class Blogtres extends Component {
             <blockquote>
                 Con frecuencia las heridas por pinchazos en el pie son producidas por objetos cortantes, tales como trozos de vidrios o metales afilados (objetos punzantes como clavos o tornillos), y en ocasiones por una mordedura de un animal. Por lo tanto, estas heridas pueden llegar a ser peligrosas si no son tratadas inmediatamente, puesto que pueden acabar en una seria infección.
             </blockquote>
-      <img class="materialboxed" width="100%" src="images/blog/BLOG3_APOYO.jpg"/>
+      <img class="materialboxed" width="100%" src={imgBlog3}/>
       <blockquote>
         Cuando hay heridas profundas se corre el riesgo de contraer tétanos, y puede causarlo cualquier objeto punzante. El Tétanos es una infección que conduce a una serie de contracciones musculares por todo el cuerpo, comenzando por el agarrotamiento de la mandíbula. En general, el tétano es una enfermedad peligrosa. Si no se trata a tiempo, da fiebre, se contraen los músculos, se dificulta la respiración y se acelera el corazón, con el riesgo de producir un síncope cardíaco, una sofocación o una asfixia.
       </blockquote>
