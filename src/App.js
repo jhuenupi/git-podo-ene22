@@ -142,6 +142,7 @@ function App() {
           ) : (
             <>
               <HeroSlider />
+              <text>zsssss</text>
               <Route path="/" exact>
                 <Card />
               </Route>
