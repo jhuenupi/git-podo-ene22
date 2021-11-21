@@ -40,16 +40,20 @@ import PlanPlus from "./pages/PlanPlus/PlanPlus";
 import getUser from "./Components/helpers/getUser";
 import EditPerfil from "./pages/Profile/EditPerfil";
 import TerminoCondiciones from "./pages/TerminoCondiciones/TerminoCondiciones";
-import simpleRestProvider from 'ra-strapi-rest';
-import { fetchUtils, Admin, Resource } from 'react-admin';
+import simpleRestProvider from "ra-strapi-rest";
+import { fetchUtils, Admin, Resource } from "react-admin";
 import VerticalTabs from "./Components/VerticalTabs/VerticalTabs";
 
-import { PostList, PostEdit, PostCreate } from '../src/Components/PodoServicios/RPodoServicios';
-import authProvider from './Components/helpers/authProvider'
+import {
+  PostList,
+  PostEdit,
+  PostCreate,
+} from "../src/Components/PodoServicios/RPodoServicios";
+import authProvider from "./Components/helpers/authProvider";
 import QuienesSomos from "./pages/QuienesSomos/QuienesSomos";
-import Privacidad from "./pages/Privacidad/Privacidad"
+import Privacidad from "./pages/Privacidad/Privacidad";
 
-const dataProvider = simpleRestProvider('http://localhost:1337');
+const dataProvider = simpleRestProvider("http://localhost:1337");
 
 function App() {
   const { isAuthenticated, isLoading, user } = useAuth0();
@@ -79,22 +83,19 @@ function App() {
   //if (todos) return <h1>{todos.length}</h1>
   const httpClient = (url, options = {}) => {
     if (!options.headers) {
-        options.headers = new Headers({ Accept: 'application/json' });
+      options.headers = new Headers({ Accept: "application/json" });
     }
-    const { token } = JSON.parse(localStorage.getItem('auth'));
-    options.headers.set('Authorization', `Bearer ${token}`);
+    const { token } = JSON.parse(localStorage.getItem("auth"));
+    options.headers.set("Authorization", `Bearer ${token}`);
     return fetchUtils.fetchJson(url, options);
-};
-  const dataProvider = simpleRestProvider('http://localhost:3000', httpClient);
-
+  };
+  const dataProvider = simpleRestProvider("http://localhost:3000", httpClient);
 
   return (
-
-
     <Router>
       <Navbar />
       <Route path="/TerminoCondiciones" exact>
-                <TerminoCondiciones />
+        <TerminoCondiciones />
       </Route>
       <main>
         <Switch>
@@ -104,13 +105,9 @@ function App() {
               {usuario.length === 0 ? (
                 <>
                   <Route exact path="/">
-                    
-                  
-
                     <Planes />
                   </Route>
                   <Route exact path="/registrogratis">
-                    
                     <RegistroGratis />
                   </Route>
                   <Route exact path="/PlanBasico">
@@ -123,8 +120,8 @@ function App() {
                     {/* <Admin authProvider={authProvider} dataProvider={dataProvider}> 
                       <Resource name="podoservicios" list={PostList}  />
                     </Admin>  */}
-                      {/* <EditPerfil/> */}
-                      <VerticalTabs></VerticalTabs>
+                    {/* <EditPerfil/> */}
+                    <VerticalTabs></VerticalTabs>
                   </Route>
                 </>
               ) : (
@@ -142,7 +139,9 @@ function App() {
           ) : (
             <>
               <HeroSlider />
-              <text>zsssss</text>
+              <div className="container">
+                <text>zsssss</text>
+              </div>
               <Route path="/" exact>
                 <Card />
               </Route>
@@ -187,7 +186,7 @@ function App() {
               </Route>
               <Route path="/Privacidad" exact>
                 <Privacidad />
-              </Route>                 
+              </Route>
               <Route path="/EditPerfil" exact>
                 <h1>WELLLLLLLLLL DONE!!!!</h1>
               </Route>
