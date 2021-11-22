@@ -139,9 +139,6 @@ function App() {
           ) : (
             <>
               <HeroSlider />
-              <div className="container">
-                <text>zsssss</text>
-              </div>
               <Route path="/" exact>
                 <Card />
               </Route>
