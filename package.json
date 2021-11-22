@@ -1,8 +1,8 @@
 {
-  "name": "PodoUbica",
+  "name": "git-podo-aug",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jhuenupi.github.io/git-podo-aug/",
+  "homepage": "https://podoubica.com/",
   "dependencies": {
     "@auth0/auth0-react": "^1.6.0",
     "@date-io/date-fns": "^2.11.0",
