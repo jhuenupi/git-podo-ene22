@@ -157,7 +157,7 @@ function App() {
               <Route path="/contact" exact>
                 <Contact />
               </Route>
-              <Route path="/bloguno" exact>
+              <Route path={process.env.PUBLIC_URL + '/bloguno'} exact>
                 <Bloguno />
               </Route>
               <Route path="/blogdos" exact>
