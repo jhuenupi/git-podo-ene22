@@ -94,7 +94,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Route path="/TerminoCondiciones" exact>
+      <Route path={process.env.PUBLIC_URL + '/TerminoCondiciones'} exact>
         <TerminoCondiciones />
       </Route>
       <main>
@@ -104,19 +104,19 @@ function App() {
               <existeUsuario />
               {usuario.length === 0 ? (
                 <>
-                  <Route exact path="/">
+                  <Route exact path={process.env.PUBLIC_URL + '/'}>
                     <Planes />
                   </Route>
-                  <Route exact path="/registrogratis">
+                  <Route exact path={process.env.PUBLIC_URL + '/registrogratis'}>
                     <RegistroGratis />
                   </Route>
-                  <Route exact path="/PlanBasico">
+                  <Route exact path={process.env.PUBLIC_URL + '/PlanBasico'}>
                     <PlanBasico />
                   </Route>
-                  <Route exact path="/PlanPlus">
+                  <Route exact path={process.env.PUBLIC_URL + '/PlanPlus'}>
                     <PlanPlus />
                   </Route>
-                  <Route path="/Edit" exact>
+                  <Route path={process.env.PUBLIC_URL + '/Edit'} exact>
                     {/* <Admin authProvider={authProvider} dataProvider={dataProvider}> 
                       <Resource name="podoservicios" list={PostList}  />
                     </Admin>  */}
@@ -139,49 +139,49 @@ function App() {
           ) : (
             <>
               <HeroSlider />
-              <Route path="/" exact>
+              <Route path={process.env.PUBLIC_URL + '/'} exact>
                 <Card />
               </Route>
-              <Route path="/Login" exact>
+              <Route path={process.env.PUBLIC_URL + '/Login'} exact>
                 <Login></Login>
               </Route>
-              <Route path="/about" exact>
+              <Route path={process.env.PUBLIC_URL + '/about'} exact>
                 <About />
               </Route>
-              <Route path="/service" exact>
+              <Route path={process.env.PUBLIC_URL + '/service'} exact>
                 <Services />
               </Route>
-              <Route path="/testimonial" exact>
+              <Route path={process.env.PUBLIC_URL + '/testimonial'} exact>
                 <Testimonial />
               </Route>
-              <Route path="/contact" exact>
+              <Route path={process.env.PUBLIC_URL + '/contact'} exact>
                 <Contact />
               </Route>
               <Route path={process.env.PUBLIC_URL + '/bloguno'} exact>
                 <Bloguno />
               </Route>
-              <Route path="/blogdos" exact>
+              <Route path={process.env.PUBLIC_URL + '/blogdos'} exact>
                 <Blogdos />
               </Route>
-              <Route path="/blogtres" exact>
+              <Route path={process.env.PUBLIC_URL +'/blogtres'} exact>
                 <Blogtres />
               </Route>
-              <Route path="/blogcuatro" exact>
+              <Route path={process.env.PUBLIC_URL +'/blogcuatro'} exact>
                 <Blogcuatro />
               </Route>
-              <Route path="/consejo1" exact>
+              <Route path={process.env.PUBLIC_URL + '/consejo1'} exact>
                 <Consejo1 />
               </Route>
-              <Route path="/consejo2" exact>
+              <Route path={process.env.PUBLIC_URL + '/consejo2'} exact>
                 <Consejo2 />
               </Route>
-              <Route path="/consejo3" exact>
+              <Route path={process.env.PUBLIC_URL + '/consejo3'} exact>
                 <Consejo3 />
               </Route>
-              <Route path="/QuienesSomos" exact>
+              <Route path={process.env.PUBLIC_URL + '/QuienesSomos'} exact>
                 <QuienesSomos />
               </Route>
-              <Route path="/Privacidad" exact>
+              <Route path={process.env.PUBLIC_URL + '/Privacidad'} exact>
                 <Privacidad />
               </Route>
               <Route path="/EditPerfil" exact>
@@ -190,7 +190,7 @@ function App() {
             </>
           )}
 
-          <Redirect to="/" />
+          <Redirect to={process.env.PUBLIC_URL + '/'} />
         </Switch>
       </main>
 
