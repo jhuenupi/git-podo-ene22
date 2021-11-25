@@ -92,6 +92,7 @@ function App() {
   const dataProvider = simpleRestProvider("http://localhost:3000", httpClient);
 
   return (
+    
     <Router>
       <Navbar />
       <Route path={process.env.PUBLIC_URL + '/TerminoCondiciones'} exact>
@@ -157,8 +158,8 @@ function App() {
               <Route path={process.env.PUBLIC_URL + '/contact'} exact>
                 <Contact />
               </Route>
-              <Route path={process.env.PUBLIC_URL + '/bloguno'} exact>
-                <Bloguno />
+              <Route path={process.env.PUBLIC_URL + '/bloguno'} component={Bloguno}>
+                
               </Route>
               <Route path={process.env.PUBLIC_URL + '/blogdos'} exact>
                 <Blogdos />
@@ -196,6 +197,7 @@ function App() {
 
       <Footer />
     </Router>
+    
   );
 }
 
