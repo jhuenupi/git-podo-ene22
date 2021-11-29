@@ -34,6 +34,9 @@ export default class Footer extends Component {
                           Quienes Somos
                         </a>
                       </li>
+                      {
+                      /* 
+                      PARA MVP
                       <li>
                         <a className="grey-text text-lighten-3" href="#!">
                           Terminos y condiciones
@@ -43,7 +46,7 @@ export default class Footer extends Component {
                         <a className="grey-text text-lighten-3" href="#!">
                           Contacto
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   <div className="col l4 offset-l2 s12">
@@ -51,11 +54,11 @@ export default class Footer extends Component {
                     <ul>
                       <li>
                       <InstagramIcon ></InstagramIcon> 
-                        <a className="grey-text text-lighten-3" href="#!"> Instagram</a>
+                        <a className="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/_u/podoubica/"> Instagram</a>
                       </li>
                       <li>
                        <FacebookIcon/>
-                        <a className="grey-text text-lighten-3" href="#!"> Facebook</a>
+                        <a className="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/PodoUbica-102305742285915"> Facebook</a>
                       </li>
                       <li>
                           <TwitterIcon/>
@@ -63,7 +66,7 @@ export default class Footer extends Component {
                       </li>
                       <li>
                           <WhatsAppIcon/>
-                        <a className="grey-text text-lighten-3" href="#!"> +569 XXXX YYYY</a>
+                        <a className="grey-text text-lighten-3" href="#!"> +569 7273 6355</a>
                       </li>
                     </ul>
                   </div>

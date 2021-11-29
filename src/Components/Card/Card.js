@@ -16,6 +16,8 @@ export default class Card extends Component {
                     <div className="row">
                     <div className="input-field col s12">                            
                         </div>                        
+                        {/* 
+                        PARA MVP
                         <div className="input-field col s12">
 
                                 <select>
@@ -71,7 +73,7 @@ export default class Card extends Component {
                         </div>                        
                         <div className="input-field col s12">                
                         <a class="waves-effect waves-light btn">Buscar</a>
-                        </div>                
+                        </div>                 */}
                     </div>
                 </form>
                 </div>
@@ -94,6 +96,8 @@ DEBEMOS PREGUNTARNOS ¿ES RECOMENDABLE PARA LOS PIES...</p>
                             </div>
                         </div>
                     </div>                    
+                    {/* 
+                    PARA MVP
                     <div className="col s7 m3">
                         <div className="card">
                             <div className="card-image">
@@ -107,7 +111,7 @@ DEBEMOS PREGUNTARNOS ¿ES RECOMENDABLE PARA LOS PIES...</p>
                             <a href="/blogdos">Ver mas...</a>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="col s12 m7">
                         <div className="card">
                             <div className="card-image">

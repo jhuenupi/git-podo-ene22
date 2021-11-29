@@ -5,6 +5,7 @@ import {
   Route,
   Redirect,
   Switch,
+  HashRouter,
 } from "react-router-dom";
 
 import About from "./pages/About/About";
@@ -93,9 +94,10 @@ function App() {
 
   return (
     
-    <Router>
+  <>  
       <Navbar />
-      <Route path={process.env.PUBLIC_URL + '/TerminoCondiciones'} exact>
+  <Router >
+    <Route path={process.env.PUBLIC_URL + '/TerminoCondiciones'} exact>
         <TerminoCondiciones />
       </Route>
       <main>
@@ -158,9 +160,8 @@ function App() {
               <Route path={process.env.PUBLIC_URL + '/contact'} exact>
                 <Contact />
               </Route>
-              <Route path={process.env.PUBLIC_URL + '/bloguno'} component={Bloguno}>
-                
-              </Route>
+              <Route exact path="/bloguno" component={Bloguno}/>
+              
               <Route path={process.env.PUBLIC_URL + '/blogdos'} exact>
                 <Blogdos />
               </Route>
@@ -197,7 +198,7 @@ function App() {
 
       <Footer />
     </Router>
-    
+  </>
   );
 }
 

@@ -53,17 +53,21 @@ const Navbar = () => {
                   <li>
                     <div>
                       <p></p>
+                      {/* 
+                      PARA MVP
                       <div className="center-align">
                         {isAuthenticated ? <Logout /> : <Login />}
-                      </div>
+                      </div> */}
                     </div>
                   </li>
                   <li>
                     <div>
+                      {/* 
+                      PARA MVP
                       {!isAuthenticated && (
                         // <a href="/Login">Crea tu cuenta</a>
                         <Creatucuenta/>
-                      )}
+                      )} */}
                     </div>
                   </li>
                   {isAuthenticated ? (
@@ -90,12 +94,16 @@ const Navbar = () => {
                       </div>
                     </li>
                     <li>
-                    <a href="/Protegemos">Protegemos tus datos</a>
+                    {/* 
+                    PARA MVP
+                    <a href="/Protegemos">Protegemos tus datos</a> */}
                   </li> 
                   </>                    
                   ) : (
                     <>  <li>
-                    <a href="/Protegemos">Protegemos tus datos</a>
+                    {/* 
+                    PARA MVP
+                    <a href="/Protegemos">Protegemos tus datos</a> */}
                   </li>                                    </>
                   )}
                 </ul>
@@ -111,9 +119,6 @@ const Navbar = () => {
             </li>
             <li>
               <a href="collapsible.html">Protegemos tus datos</a>
-            </li>
-            <li>
-              <a href="mobile.html">Mobilesss</a>
             </li>
           </ul>
         </div>
