@@ -9,6 +9,7 @@ import image4 from '../../images/Slide/banner4.jpg';
 import image5 from '../../images/Slide/banner5.jpg';
 import image6 from '../../images/Slide/banner6.jpg';
 import image7 from '../../images/Slide/banner7.jpg';
+import image8 from '../../images/Slide/banner8.jpg';
 // Import Swiper styles
 import '../../../node_modules/swiper/swiper.min.css'
 import "../../../node_modules/swiper/components/pagination/pagination.min.css"
@@ -53,6 +54,10 @@ const HeroSlider = () => {
   <SwiperSlide>
     <img src={image7} alt="image7"></img>
   </SwiperSlide>         
+  <SwiperSlide>
+    <img src={image8} alt="image8"></img>
+  </SwiperSlide>         
+
   </Swiper>
     </>
         )
