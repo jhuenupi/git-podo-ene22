@@ -88,8 +88,8 @@ export default class Card extends Component {
                             <span className="card-title"></span>
                             </div>
                             <div className="card-content">
-                            <p>“CUANDO HEREDAMOS UN CALZADO”
-DEBEMOS PREGUNTARNOS ¿ES RECOMENDABLE PARA LOS PIES...</p>
+                            <p>Cuando Heredamos un calzado debemos preguntarnos
+                                ¿Es recomendable para los pies...</p>
                             </div>
                             <div className="card-action">
                             <a href="/bloguno">Ver mas...</a>
