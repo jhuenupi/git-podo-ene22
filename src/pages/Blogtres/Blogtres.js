@@ -63,7 +63,7 @@ export default class Blogtres extends Component {
             <Divider />
             <CardMedia
               component="img"
-              height="600"
+              height="auto"
               image={imgBlog3}
               alt=""
             />
