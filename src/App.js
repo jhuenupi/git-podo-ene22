@@ -10,17 +10,12 @@ import {
 
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
-import Home from "./pages/Home/Home";
 import Services from "./pages/Service/Services";
 import Testimonial from "./pages/Testimonial/Testimonial";
 import Navbar from "./Components/Navbar/Navbar";
-import Slider from "./Components/Slider/Slider";
 import "../node_modules/materialize-css/dist/css/materialize.min.css";
 import Card from "./Components/Card/Card";
 import Footer from "./Components/Footer/Footer";
-import Slider2 from "./Components/Slider2/Slider2";
-import Sections from "./Components/Sections/Sections";
-import Carousel from "./Components/Carousel/Carousel";
 import HeroSlider from "./Components/HeroSlider/HeroSlider";
 import Bloguno from "./pages/BlogUno/Bloguno";
 import Blogdos from "./pages/Blogdos/Blogdos";
@@ -44,6 +39,7 @@ import TerminoCondiciones from "./pages/TerminoCondiciones/TerminoCondiciones";
 import simpleRestProvider from "ra-strapi-rest";
 import { fetchUtils, Admin, Resource } from "react-admin";
 import VerticalTabs from "./Components/VerticalTabs/VerticalTabs";
+import CarouselContainer from "./Components/CarouselContainer/CarouselContainer";
 
 import {
   PostList,
@@ -93,112 +89,117 @@ function App() {
   const dataProvider = simpleRestProvider("http://localhost:3000", httpClient);
 
   return (
-    
-  <>  
+    <>
       <Navbar />
-  <Router >
-    <Route path={process.env.PUBLIC_URL + '/TerminoCondiciones'} exact>
-        <TerminoCondiciones />
-      </Route>
-      <main>
-        <Switch>
-          {isAuthenticated ? (
-            <>
-              <existeUsuario />
-              {usuario.length === 0 ? (
-                <>
-                  <Route exact path={process.env.PUBLIC_URL + '/'}>
-                    <Planes />
-                  </Route>
-                  <Route exact path={process.env.PUBLIC_URL + '/registrogratis'}>
-                    <RegistroGratis />
-                  </Route>
-                  <Route exact path={process.env.PUBLIC_URL + '/PlanBasico'}>
-                    <PlanBasico />
-                  </Route>
-                  <Route exact path={process.env.PUBLIC_URL + '/PlanPlus'}>
-                    <PlanPlus />
-                  </Route>
-                  <Route path={process.env.PUBLIC_URL + '/Edit'} exact>
-                    {/* <Admin authProvider={authProvider} dataProvider={dataProvider}> 
+      <Router>
+        <Route path={process.env.PUBLIC_URL + "/TerminoCondiciones"} exact>
+          <TerminoCondiciones />
+        </Route>
+        <main>
+          <Switch>
+            {isAuthenticated ? (
+              <>
+                <existeUsuario />
+                {usuario.length === 0 ? (
+                  <>
+                    <Route exact path={process.env.PUBLIC_URL + "/"}>
+                      <Planes />
+                    </Route>
+                    <Route
+                      exact
+                      path={process.env.PUBLIC_URL + "/registrogratis"}
+                    >
+                      <RegistroGratis />
+                    </Route>
+                    <Route exact path={process.env.PUBLIC_URL + "/PlanBasico"}>
+                      <PlanBasico />
+                    </Route>
+                    <Route exact path={process.env.PUBLIC_URL + "/PlanPlus"}>
+                      <PlanPlus />
+                    </Route>
+                    <Route path={process.env.PUBLIC_URL + "/Edit"} exact>
+                      {/* <Admin authProvider={authProvider} dataProvider={dataProvider}> 
                       <Resource name="podoservicios" list={PostList}  />
                     </Admin>  */}
-                    {/* <EditPerfil/> */}
-                    <VerticalTabs></VerticalTabs>
-                  </Route>
-                </>
-              ) : (
-                <>
-                  <div className="center">
-                    <h5>
-                      <b>Bienvenido {user.nickname}</b>
-                    </h5>
-                  </div>
-                  <HeroSlider />
+                      {/* <EditPerfil/> */}
+                      <VerticalTabs></VerticalTabs>
+                    </Route>
+                  </>
+                ) : (
+                  <>
+                    <div className="center">
+                      <h5>
+                        <b>Bienvenido {user.nickname}</b>
+                      </h5>
+                    </div>
+                    <HeroSlider /> 
+                    {/* <CarouselContainer /> */}
+                    <Card />
+                  </>
+                )}
+              </>
+            ) : (
+              <>
+                <HeroSlider />
+                
+                {/* <CarouselContainer/> */}
+                <Route path={process.env.PUBLIC_URL + "/"} exact>
                   <Card />
-                </>
-              )}
-            </>
-          ) : (
-            <>
-              <HeroSlider />
-              <Route path={process.env.PUBLIC_URL + '/'} exact>
-                <Card />
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/Login'} exact>
-                <Login></Login>
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/about'} exact>
-                <About />
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/service'} exact>
-                <Services />
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/testimonial'} exact>
-                <Testimonial />
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/contact'} exact>
-                <Contact />
-              </Route>
-              <Route exact path="/bloguno" component={Bloguno}/>
-              
-              <Route path={process.env.PUBLIC_URL + '/blogdos'} exact>
-                <Blogdos />
-              </Route>
-              <Route path={process.env.PUBLIC_URL +'/blogtres'} exact>
-                <Blogtres />
-              </Route>
-              <Route path={process.env.PUBLIC_URL +'/blogcuatro'} exact>
-                <Blogcuatro />
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/consejo1'} exact>
-                <Consejo1 />
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/consejo2'} exact>
-                <Consejo2 />
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/consejo3'} exact>
-                <Consejo3 />
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/QuienesSomos'} exact>
-                <QuienesSomos />
-              </Route>
-              <Route path={process.env.PUBLIC_URL + '/Privacidad'} exact>
-                <Privacidad />
-              </Route>
-              <Route path="/EditPerfil" exact>
-                <h1>WELLLLLLLLLL DONE!!!!</h1>
-              </Route>
-            </>
-          )}
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/Login"} exact>
+                  <Login></Login>
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/about"} exact>
+                  <About />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/service"} exact>
+                  <Services />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/testimonial"} exact>
+                  <Testimonial />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/contact"} exact>
+                  <Contact />
+                </Route>
+                <Route exact path="/bloguno" component={Bloguno} />
 
-          <Redirect to={process.env.PUBLIC_URL + '/'} />
-        </Switch>
-      </main>
+                <Route path={process.env.PUBLIC_URL + "/blogdos"} exact>
+                  <Blogdos />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/blogtres"} exact>
+                  <Blogtres />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/blogcuatro"} exact>
+                  <Blogcuatro />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/consejo1"} exact>
+                  <Consejo1 />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/consejo2"} exact>
+                  <Consejo2 />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/consejo3"} exact>
+                  <Consejo3 />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/QuienesSomos"} exact>
+                  <QuienesSomos />
+                </Route>
+                <Route path={process.env.PUBLIC_URL + "/Privacidad"} exact>
+                  <Privacidad />
+                </Route>
+                <Route path="/EditPerfil" exact>
+                  <h1>WELLLLLLLLLL DONE!!!!</h1>
+                </Route>
+              </>
+            )}
 
-      <Footer />
-    </Router>
-  </>
+            <Redirect to={process.env.PUBLIC_URL + "/"} />
+          </Switch>
+        </main>
+
+        <Footer />
+      </Router>
+    </>
   );
 }
 
