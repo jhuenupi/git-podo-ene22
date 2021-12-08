@@ -41,7 +41,7 @@ const HeroSlider = () => {
         <SwiperSlide key={`slide-1}`} tag="li" style={{ listStyle: 'none' }}>
           <img class="responsive" src={image1} alt="image1"></img>
         </SwiperSlide>
-        {/* <SwiperSlide key={`slide-2}`} tag="li" style={{ listStyle: 'none' }}>
+        <SwiperSlide key={`slide-2}`} tag="li" style={{ listStyle: 'none' }}>
           <img class="responsive" src={image2} alt="image2"></img>
         </SwiperSlide>
         <SwiperSlide key={`slide-3}`} tag="li" style={{ listStyle: 'none' }}>
@@ -61,7 +61,7 @@ const HeroSlider = () => {
         </SwiperSlide>
         <SwiperSlide key={`slide-8}`} tag="li" style={{ listStyle: 'none' }}>
           <img class="responsive" src={image8} alt="image8"></img>
-        </SwiperSlide> */}
+        </SwiperSlide> 
       </Swiper>
     </>
   );
