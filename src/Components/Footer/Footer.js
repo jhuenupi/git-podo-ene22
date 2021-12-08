@@ -62,7 +62,7 @@ export default class Footer extends Component {
                       </li>
                       <li>
                           <TwitterIcon/>
-                        <a className="grey-text text-lighten-3" href="#!"> Twitter</a>
+                        <a className="grey-text text-lighten-3" href="https://twitter.com/PodoUbica"> Twitter</a>
                       </li>
                       <li>
                           <WhatsAppIcon/>
